@@ -64,4 +64,87 @@ body {
     color: #555;
     font-size: 0.9rem;
   }
+  #typing-text {
+    min-height: 1.5em;
+    color: #12b1f5;
+    font-weight: 600;
+    font-size: 1.5rem;
+    border-right: 2px solid #3e64ff;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  #typing-text {
+    min-height: 1.5em;
+    color: #12b1f5;
+    font-weight: 600;
+    font-size: 1.5rem;
+    border-right: 2px solid #3e64ff;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  /* GALAXIA - LINHAS CRUZADAS NO FUNDO */
+  
+  body::before,
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    pointer-events: none;
+    z-index: -1;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.04) 0px,
+        rgba(255, 255, 255, 0.04) 1px,
+        transparent 1px,
+        transparent 10px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.04) 0px,
+        rgba(255, 255, 255, 0.04) 1px,
+        transparent 1px,
+        transparent 10px
+      );
+    animation: galaxiaMove 60s linear infinite;
+  }
+  
+  body::after {
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.02) 0px,
+        rgba(255, 255, 255, 0.02) 1px,
+        transparent 1px,
+        transparent 15px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.02) 0px,
+        rgba(255, 255, 255, 0.02) 1px,
+        transparent 1px,
+        transparent 15px
+      );
+    animation: galaxiaMoveReverse 90s linear infinite;
+  }
+  
+  @keyframes galaxiaMove {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate(-25%, -25%) rotate(360deg);
+    }
+  }
+  
+  @keyframes galaxiaMoveReverse {
+    0% {
+      transform: translate(0, 0) rotate(360deg);
+    }
+    100% {
+      transform: translate(25%, 25%) rotate(0deg);
+    }
+  }
   
