@@ -1,14 +1,14 @@
 const frases = [
-    "Desenvolvedor Frontend",
-    "Foco em React e TypeScript",
-    "Em busca de oportunidades"
-  ];
-  
-  let index = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  const el = document.getElementById('typing-text');
-  
+  "Desenvolvedor Frontend",
+  "Foco em React e JavaScript",
+  "Em busca de oportunidades de trabalho Frontend ou Full Stack",
+];
+
+let index = 0;
+let charIndex = 0;
+let isDeleting = false;
+const el = document.getElementById("typing-text");
+   
   function type() {
     const current = frases[index];
     const visibleText = current.substring(0, charIndex);
